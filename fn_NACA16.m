@@ -100,8 +100,15 @@ else
     T3=[];
 end
 
+%% Coordinates
+% The following information is made available for variety of purposes
+% SNo x yt yt' yc yc' [1-6] - SNo XLocation YThickness SlopeOfYThickness YCamber SlopeOfYCamber
+% xu yu xl y1        [7-10] - XUpper YUpper XLower YLower
+% x yu yl           [11-13] - XLocation YUpper YLower
+
 % Combine Symmetrical and Asymmertrical Airfoil Data
 % x yt yt' yc yc' xu yu xl yl x yu yl
+
 if(isempty(T1))
     Coordinates = [T0 T0(:,3:4)*0 T0(:,2:3) T0(:,2) -T0(:,3) T0(:,2) T0(:,3) -T0(:,3)];
 else
